@@ -16,11 +16,24 @@ module.exports = {
         }
       },
       {
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'style-loader',
+            options: { 
+                insert: 'head', // insert style tag inside of <head>
+                injectType: 'singletonStyleTag' // this is for wrap all your style in just one style tag
+            },
+          },
+          "css-loader"
+        ],
+      },
+      {
         test: [/\.vert$/, /\.frag$/],
         use: "raw-loader"
       },
       {
-        test: /\.(gif|png|jpe?g|svg|xml)$/i,
+        test: /\.(gif|png|jpe?g|svg|ogg|mp3|wav|xml)$/i,
         use: "file-loader"
       }
     ]

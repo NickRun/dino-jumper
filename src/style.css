@@ -1,0 +1,19 @@
+html {
+    height: 100%;
+    width:100%;
+    display: table;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color:#F4C09B;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+canvas {
+    border: 3px solid #050517;
+}
